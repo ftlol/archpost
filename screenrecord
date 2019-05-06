@@ -1,0 +1,4 @@
+sudo pacman -S asciinema #for recording command line 
+Install 'simplescreenrecorder' and optionally 'lib32-simplescreenrecorder' 
+(if you want to record 32-bit OpenGL applications on a 64-bit system). 
+sudo pacman -S simplescreenrecorder lib32-simplescreenrecorder
