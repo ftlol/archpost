@@ -1,0 +1,3 @@
+lib32-nvidia-libgl
+lib32-nvidia-utils
+sudo nano /etc/pacman.conf #uncomment multilib then save and exit
