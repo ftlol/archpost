@@ -1,0 +1,6 @@
+sudo pacman -S tbsm
+#add to ~/.zprofile under home directory to autostart for zsh or ~/.bashprofile
+# Auto start tbsm after login on first two VTs
+[[ $XDG_VTNR -le 2 ]] && tbsm
+tbsm doc man
+tbsm help
