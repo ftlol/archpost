@@ -1,0 +1,7 @@
+# place in /etc/X11/xorg.conf.d/20_intel_flicker_free.conf
+Section "Device"
+  Identifier  "Intel Graphics"
+  Driver      "intel"
+  Option      "TripleBuffer" "true"
+  Option      "TearFree"     "true"
+EndSection
