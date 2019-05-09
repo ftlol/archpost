@@ -1,0 +1,2 @@
+dd bs=4M if=/home/p/clnzla.iso of=/dev/sdb status=progress oflag=sync
+wipefs --all /dev/sdb
