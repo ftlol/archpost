@@ -1,4 +1,4 @@
-useradd -m -g users -G wheel -s /bin/zsh username
+useradd -m -G wheel -s /bin/zsh username
 passwd 
 nano /etc/sudoers
 username ALL=(ALL) NOPASSWD: ALL
