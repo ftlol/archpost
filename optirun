@@ -1,0 +1,2 @@
+$ optirun -b none nvidia-settings -c :8
+optirun wine application.exe
