@@ -1,5 +1,6 @@
-pacman -S octopi kdesu trizen network manager pulseaudio dialog iwlwifi plasma-desktop tbsm networkmanager
+pacman -S octopi kdesu trizen network manager pulseaudio dialog iwlwifi plasma-desktop tbsm networkmanager bluez bluez-utils
 sudo systemctl enable NetworkManager.service
 and also start it
 pacmans -S bumblebee nvidia 
 systemctl enable bumblebeed
+systemctl enable bluetooth.service
