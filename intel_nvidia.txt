@@ -1,0 +1,33 @@
+lspci -k | grep -A 2 -E "(VGA|3D)" | nano
+
+00:02.0 VGA compatible controller: Intel Corporation HD Graphics 5500 (rev 09) DeviceName: Intel(R)
+Graphics GT2 Subsystem: Hewlett-Packard Company Device 229c
+-- 0a:00.0 3D controller: NVIDIA Corporation GM107M [GeForce GTX 850M] (rev a2) DeviceName: NVIDIA
+GeForce GT 850M Subsystem: Hewlett-Packard Company Device 229c
+
+yay -S acpi_call-lts linux-lts linuxs-lts-docs linux-lts-headers
+
+yay -S nvidia-utils ncidia-settings nvidia-lts
+
+yay -S nvidia-prime optimus-manager optimus-manager-qt
+
+yay -S phornix-test-suite
+
+yay -S grub-custimzer
+
+optimus-manager --switch nvidia
+optimus-manager --switch integrated
+optimus-manager --switch hybrid
+
+sudo nano /usr/lib/python3.x/site-packages/optimus-manager/sessions.py
+
+for cmd in [
+        "systemctl restart sddm.service" # sddm logout
+        #"i3-msg exit",  # i3
+        #"openbox --exit",  # Openbox
+        #"awesome-client \"awesome.quit()\"",  # AwesomeWM
+        #"bspc quit",  # bspwm
+        #"pkill -SIGTERM -f dwm",  # dwm
+        #"pkill -SIGTERM -f lxsession",  # LXDE
+        #"qtile-cmd -o cmd -f shutdown"  # qtile
+    ]:
